@@ -18,6 +18,7 @@ dependencies {
 }
 
 tasks.withType(Test) {
+    useJUnitPlatform()
     systemProperties(System.getProperties())
     testLogging {
         lifecycle {
@@ -39,11 +40,6 @@ allure {
             }
         }
     }
-}
-
-test {
-    useJUnitPlatform()
-    systemProperties(System.getProperties())
 }
 
 task simple_test(type: Test) {

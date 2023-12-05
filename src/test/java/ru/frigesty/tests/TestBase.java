@@ -15,7 +15,7 @@ public class TestBase {
 
     @BeforeAll
     static void beforeAll() {
-        String wdHost = System.getProperty("wd", "selenoid.autotests");
+        String wdHost = System.getProperty("wd", "selenoid.autotests.cloud");
         String getWdHost = format("https://user1:1234@%s/wd/hub", wdHost);
         String[] browser = System.getProperty("browser").split(":");
         DesiredCapabilities capabilities = new DesiredCapabilities();
