@@ -22,8 +22,8 @@ public class TestBase {
 
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.pageLoadStrategy = System.getProperty("loadStrategy", "eager");
-        Configuration.baseUrl = System.getProperty("baseUrl", "");
-        Configuration.holdBrowserOpen = Boolean.parseBoolean(System.getProperty("holdBrowser", "false"));
+        Configuration.baseUrl = "https://demoqa.com";
+        Configuration.holdBrowserOpen = false;
         Configuration.remote = getWdHost;
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
